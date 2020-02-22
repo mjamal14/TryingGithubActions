@@ -13,6 +13,7 @@ jobs:
       run:  |
         set path_var = echo %PATH%
         echo %path_var%
+        echo %dir%
       shell: cmd
     - name: Run a multi-line script
       run: |
