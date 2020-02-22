@@ -14,5 +14,5 @@ jobs:
         echo %dir%
       shell: cmd
     - name: Run script from scripts folder
-      run: ./scripts/stVar.cmd      
+      run: ./scripts/setVar.cmd      
       shell: cmd
