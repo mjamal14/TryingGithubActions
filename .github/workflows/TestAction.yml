@@ -10,7 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Display the path
-      run: echo %PATH%
+      run:  |
+        set path_var = echo %PATH%
+        echo %path_var%
       shell: cmd
     - name: Run a multi-line script
       run: |
