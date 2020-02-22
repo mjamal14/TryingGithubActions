@@ -7,12 +7,12 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Display the path
-      run:  |
-        set path_var = echo %PATH%
-        echo %path_var%
-        echo %dir%
-      shell: cmd
+    #- name: Display the path
+    #  run:  |
+    #    set path_var = echo %PATH%
+    #    echo %path_var%
+    #    echo %dir%
+    #  shell: cmd
     - name: Run script from scripts folder
       run: ./scripts/setVar.cmd      
       shell: cmd
