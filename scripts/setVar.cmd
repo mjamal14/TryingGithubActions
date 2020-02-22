@@ -1,2 +1,1 @@
-set path_var = echo %PATH%
-echo %path_var%
+echo "Hello world"
