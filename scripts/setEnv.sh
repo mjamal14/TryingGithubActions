@@ -1,5 +1,5 @@
 #!/bin/bash
-cat .env | grep VERSION
+echo "Display Version"
 
 #wget https://ci.roster.thomsonreuters.com/.env -O .env.ci
 
