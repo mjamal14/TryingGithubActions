@@ -7,20 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    #- name: Display the path
-    #  run:  |
-    #    set path_var = echo %PATH%
-    #    echo %path_var%
-    #    echo %dir%
-    #  shell: cmd
-    #- name: Run script from scripts folder
-    #  run: ./scripts/setVar.cmd "Jamal"  
-    #  shell: cmd
     - name: Run shell script
       run: |
            chmod 777 scripts/setEnv.sh
            echo "::set-output name=save-var::$(scripts/setEnv.sh)\n"
-           #echo "::set-output name=save-var::$(uname -a)\n"
       shell: sh
       id: shell-output
     - name: Display Output
