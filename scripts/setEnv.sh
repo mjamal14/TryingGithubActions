@@ -9,7 +9,7 @@ error=$?
 if [ $error -eq 0 ]
 then
 #if files are the same return yes
-   echo "yes"
+   echo "no"
 elif [ $error -eq 1 ]
 then
 #if files are the different return no
