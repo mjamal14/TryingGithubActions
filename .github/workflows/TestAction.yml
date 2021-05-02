@@ -19,10 +19,10 @@ jobs:
     - name: Run shell script
       run: |
            chmod 777 scripts/setEnv.sh
-           #echo "::set-output name=save-var::$(scripts/setEnv.sh)\n"
-           echo "::set-output name=save-var::$(uname -a)\n"
+           echo "::set-output name=save-var::$(scripts/setEnv.sh)\n"
+           #echo "::set-output name=save-var::$(uname -a)\n"
       shell: sh
       id: shell-output
     - name: Display Output
       run: |
-           echo ${{ steps.save-var.outputs.shell-output }}
+           echo ${{ steps.shell-output.outputs.save-var }}
