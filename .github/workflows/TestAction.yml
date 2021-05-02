@@ -13,6 +13,9 @@ jobs:
     #    echo %path_var%
     #    echo %dir%
     #  shell: cmd
-    - name: Run script from scripts folder
-      run: ./scripts/setVar.cmd "Jamal"  
-      shell: cmd
+    #- name: Run script from scripts folder
+    #  run: ./scripts/setVar.cmd "Jamal"  
+    #  shell: cmd
+    - name: Run shell script
+      run: ./scripts/setEnv.sh
+      shell: sh
