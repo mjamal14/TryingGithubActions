@@ -18,7 +18,7 @@ jobs:
     #  shell: cmd
     - name: Run shell script
       run: |
-           echo "::set-output name=save-var::$(./scripts/setEnv.sh)\n"
+           echo "::set-output name=save-var::$(scripts/setEnv.sh)\n"
       shell: sh
       id: shell-output
     - name: Display Output
