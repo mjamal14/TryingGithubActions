@@ -20,7 +20,7 @@ jobs:
       run: |
            OUTPUT_SHELL=$(./scripts/setEnv.sh)
            echo '::set-output name=OUTPUT_SHELL::$OUTPUT_SHELL'
-      shell: bash
+      shell: sh
       id: shell-output
     - name: Display Output
       run: |
