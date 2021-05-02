@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     #- name: Display the path
@@ -18,10 +18,9 @@ jobs:
     #  shell: cmd
     - name: Run shell script
       run: |
-           OUTPUT_SHELL=$(uname -a)
-           echo '::set-output name=OUTPUT_SHELL::$OUTPUT_SHELL'
+           echo "::set-output name=save-var::$(./scripts/setEnv.sh)\n"
       shell: sh
       id: shell-output
     - name: Display Output
       run: |
-           echo ${{ steps.shell-output.outputs.OUTPUT_SHELL }} 
+           echo ${{ steps.save-var.outputs.shell-output }}
