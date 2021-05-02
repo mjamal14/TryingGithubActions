@@ -17,5 +17,11 @@ jobs:
     #  run: ./scripts/setVar.cmd "Jamal"  
     #  shell: cmd
     - name: Run shell script
-      run: ./scripts/setEnv.sh
-      shell: sh
+      run: |
+           OUTPUT_SHELL=$(./scripts/setEnv.sh)
+           echo '::set-output name=OUTPUT_SHELL::$OUTPUT_SHELL'
+      shell: bash
+      id: shell-output
+    - name: Display Output
+      run: |
+           echo ${{ steps.shell-output.outputs.OUTPUT_SHELL }} 
