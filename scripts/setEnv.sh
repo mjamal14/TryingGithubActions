@@ -8,9 +8,11 @@ diff scripts/var1 scripts/var2 > /dev/null 2>&1
 error=$?
 if [ $error -eq 0 ]
 then
+#if files are the same return yes
    echo "yes"
 elif [ $error -eq 1 ]
 then
+#if files are the different return no
    echo "no"
 fi
 
