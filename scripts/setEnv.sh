@@ -1,9 +1,9 @@
 #!/bin/bash
-#echo "Display Version11"
 
 #wget https://ci.roster.thomsonreuters.com/.env -O .env.ci
 
 chmod 777 scripts/var1 scripts/var2
+
 diff scripts/var1 scripts/var2 > /dev/null 2>&1
 error=$?
 if [ $error -eq 0 ]
