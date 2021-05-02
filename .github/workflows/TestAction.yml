@@ -14,5 +14,7 @@ jobs:
       shell: sh
       id: shell-output
     - name: Display Output
+      if: ${{ steps.shell-output.outputs.save-var }} == 'yes'
       run: |
-           echo ${{ steps.shell-output.outputs.save-var }}
+           echo "Run the test steps"
+           
