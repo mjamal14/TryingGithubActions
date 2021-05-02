@@ -18,7 +18,7 @@ jobs:
     #  shell: cmd
     - name: Run shell script
       run: |
-           OUTPUT_SHELL=$(./scripts/setEnv.sh)
+           OUTPUT_SHELL=$(uname -a)
            echo '::set-output name=OUTPUT_SHELL::$OUTPUT_SHELL'
       shell: sh
       id: shell-output
