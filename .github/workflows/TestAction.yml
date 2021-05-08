@@ -12,6 +12,7 @@ jobs:
            chmod 777 scripts/setEnv.sh
            echo "::set-output name=save-var::$(scripts/setEnv.sh)\n"
            if: ${{ save-var == 'yes' }}
+           echo "Run steps"
       shell: sh
       id: shell-output
   #  - name: Display Output
